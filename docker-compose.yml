@@ -1,0 +1,13 @@
+services:
+  gha-runner:
+    image: github-runner:local
+    container_name: gha-runner
+    restart: unless-stopped
+    env_file:
+      - .env.runner
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - runner-work:/home/runner/_work
+
+volumes:
+  runner-work:

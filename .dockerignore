@@ -1,0 +1,6 @@
+.git
+.gitignore
+.env.runner
+README.md
+docker-compose.yml
+Jenkinsfile
