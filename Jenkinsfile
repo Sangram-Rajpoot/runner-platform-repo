@@ -8,7 +8,7 @@ pipeline {
 
     environment {
         // Replace with your real JFrog registry later
-        JFROG_REGISTRY = 'acme.jfrog.io'
+        JFROG_REGISTRY = 'jfrogtrial2166.jfrog.io'
         JFROG_REPO = 'docker-local'
         IMAGE_NAME = 'github-runner'
         AWS_DEFAULT_REGION = 'ap-south-1'
