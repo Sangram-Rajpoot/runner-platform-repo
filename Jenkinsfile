@@ -54,19 +54,19 @@ pipeline {
             }
         }
 
-        stage('Push Runner Image') {
-            steps {
-                sh '''
-                    set -euo pipefail
-                    source build.env
+       stage('Push Runner Image') {
+    steps {
+        sh '''
+            set -eu
+            . ./build.env
 
-                    docker push "${FULL_IMAGE}"
+            docker push "${FULL_IMAGE}"
 
-                    echo "Runner image pushed:"
-                    echo "${FULL_IMAGE}"
-                '''
-            }
-        }
+            echo "Runner image pushed:"
+            echo "${FULL_IMAGE}"
+        '''
+    }
+}
     }
 
     post {
